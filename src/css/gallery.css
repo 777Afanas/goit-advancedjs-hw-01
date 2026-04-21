@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fafafa;
+  color: #212121;
+  line-height: 1.5;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.js-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  list-style: none;
+  /* Прибираємо маркери списку */
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  /* Центруємо галерею, якщо екран дуже широкий */
+}
+
+.gallery-item {
+  /* Розрахунок ширини для 3-х колонок з урахуванням gap: (100% - (24px * 2)) / 3 */
+  flex-basis: calc((100% - 48px) / 3);
+}
+
+.gallery-link {
+  display: block;
+  /* text-decoration: none; */
+  cursor: zoom-in;
+  /* Підказуємо користувачеві, що картинку можна збільшити */
+}
+
+.gallery-image {
+  width: 100%;
+  /* Картинка займає всю ширину li */
+  height: 200px;
+  /* Фіксована висота для однакового вигляду всіх карток */
+  object-fit: cover;
+  /* Картинка заповнює контейнер без деформації */
+  display: block;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* Плавний ефект */
+}
+
+.gallery-image:hover {
+  transform: scale(1.03);
+  /* Легке збільшення при наведенні */
+}
