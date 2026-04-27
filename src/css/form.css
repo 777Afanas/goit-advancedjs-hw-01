@@ -1,15 +1,31 @@
-* Стилізація форми */
+/* Базові стилі для контейнера */
+/* .container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  font-family: sans-serif;
+} */
+
+.main-title {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Стилізація форми */
 .feedback-form {
   display: flex;
   flex-direction: column;
-  gap: 16px; /* Відстань між полями */
-  /* padding: 24px;
-max-width: 50px; */
-    margin: 0 auto;
-  background-color: #f9f9f9;
-  border-radius: 8px;
+  gap: 16px;
+  /* Відступ між елементами */
+  max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    font-family: sans-serif;
 }
 
+/* Стилізація лейблів (текст над полями) */
 .feedback-form label {
   display: flex;
   flex-direction: column;
@@ -18,38 +34,44 @@ max-width: 50px; */
   color: #2e2f42;
 }
 
-/* Стилі для полів введення */
+/* Стилі для полів вводу та текстової області */
 .feedback-form input,
-.feedback-form textarea {     
+.feedback-form textarea {
+  width: 100%;
   padding: 8px 16px;
-  border: 1px solid #808080;
+  border: 1px solid #8e8f99;
   border-radius: 4px;
   outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Ефект при фокусі на полі */
 .feedback-form input:focus,
 .feedback-form textarea:focus {
-  border-color: #4e75ff; /* Колір при фокусі */
+  border-color: #4d5ae5;
 }
 
-.feedback-form textarea {
-  resize: none; /* Забороняємо ручну зміну розміру, щоб не псувати верстку */
-}
-
-/* Стилі для кнопки */
+/* Стилізація кнопки */
 .feedback-form button {
-  padding: 8px 16px;
-  width: fit-content;
-  background-color: #4e75ff;
-  color: #ffffff;
+  display: block;
+  margin: 0 auto;
+  min-width: 95px;
+  height: 40px;
   border: none;
   border-radius: 8px;
+  background-color: #4d5ae5;
+  color: #ffffff;
   font-weight: 500;
   cursor: pointer;
-  transition: background-color 250ms ease;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .feedback-form button:hover {
-  background-color: #6c8cff;
+  background-color: #404bbf;
+}
+
+/* Стиль для посилання "Go back" */
+.back-link {   
+  color: #4d5ae5;
+  text-decoration: none;
 }
